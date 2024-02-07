@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Code</title>
+</head>
+<body>
+    <h1>Random Code</h1>
+    <p>Here's a randomly generated code: <span id="randomCode"></span></p>
+
+    <script>
+        function generateRandomCode(length) {
+            var result = '';
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var charactersLength = characters.length;
+            for (var i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+        }
+
+        var randomCode = generateRandomCode(10);
+        document.getElementById("randomCode").innerText = randomCode;
+    </script>
+</body>
+</html>
